@@ -10,12 +10,13 @@
 #include "pitches4.h"
 
 #include "gameofthrones.h"
-#include "furelise.h"
-#include "jeopardy.h"
-#include "rickroll.h"
-#include "starwars.h"
-#include "supermario.h"
-#include "tetris.h"
+#include "carrabean.h"
+// #include "furelise.h"
+// #include "jeopardy.h"
+// #include "rickroll.h"
+// #include "starwars.h"
+// #include "supermario.h"
+// #include "tetris.h"
 
 
 void setup()
@@ -33,7 +34,7 @@ void setup()
 void loop()
 {
     if (digitalRead(SW_C) == PRESSED) {
-      noTone(BUZZER);
+      noTone(A5);
       GameOfThrones();
       dwenguinoLCD.clear();
       dwenguinoLCD.setCursor(0,0);
@@ -41,11 +42,11 @@ void loop()
 
     }
     if (digitalRead(SW_N) == PRESSED) {
-      noTone(BUZZER);
-      tone(BUZZER, 540);
+      noTone(A5);
+      carrabean();
       dwenguinoLCD.clear();
       dwenguinoLCD.setCursor(0,0);
-      dwenguinoLCD.print(String("540"));
+      dwenguinoLCD.print(String("Carrabean"));
 
     }
     if (digitalRead(SW_S) == PRESSED) {

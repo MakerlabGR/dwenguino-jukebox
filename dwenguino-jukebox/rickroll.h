@@ -108,7 +108,7 @@ char* lyrics_chorus[] =
 //   c = 0;
 // }
 
-void loop()
+void rickroll()
 {
   // edit code here to define play conditions
   /*
@@ -122,11 +122,11 @@ void loop()
 
   // play next step in song
   if (flag == true) {
-    rickroll();
+    play();
   }
 }
 
-void rickroll() {
+void play() {
   int notelength;
   if (a == 1 || a == 2) { // Intro
     // intro
