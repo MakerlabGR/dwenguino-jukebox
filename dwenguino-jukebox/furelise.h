@@ -3,6 +3,28 @@
     int tempo = 120;
     boolean continuePlaying = true; //Set to true to continuously play (otherwise, false)
     int continueDelay = 0; //Time to wait before continuing playing
+    
+    void spacedNote(int frequencyInHertz, int noteLength)
+    {
+      tone(speakerPin, frequencyInHertz);
+      float delayTime = (1000/tempo) * (60/4) * noteLength;
+      delay(delayTime - 50);
+      noTone(speakerPin);
+      delay(50);
+    }
+    void note(int frequencyInHertz, int noteLength)  //Code to take care of the note
+    {
+      tone(speakerPin, frequencyInHertz);
+      float delayTime = (1000/tempo) * (60/4) * noteLength;
+      delay(delayTime);
+    }
+    void rest(int restLength)
+    {
+      noTone(speakerPin);
+      float delayTime = (1000/tempo) * (60/4) * restLength;
+      delay(delayTime);
+    }
+
     void furelise()
     {
       // Song goes here
@@ -118,23 +140,3 @@
     //   pinMode(speakerPin, OUTPUT);
     //   Serial.begin(9600);
     // }
-    void spacedNote(int frequencyInHertz, int noteLength)
-    {
-      tone(speakerPin, frequencyInHertz);
-      float delayTime = (1000/tempo) * (60/4) * noteLength;
-      delay(delayTime - 50);
-      noTone(speakerPin);
-      delay(50);
-    }
-    void note(int frequencyInHertz, int noteLength)  //Code to take care of the note
-    {
-      tone(speakerPin, frequencyInHertz);
-      float delayTime = (1000/tempo) * (60/4) * noteLength;
-      delay(delayTime);
-    }
-    void rest(int restLength)
-    {
-      noTone(speakerPin);
-      float delayTime = (1000/tempo) * (60/4) * restLength;
-      delay(delayTime);
-    }

@@ -1,31 +1,35 @@
+const int buzzerPin = A5;
+const int ledPin1 = 12;
+const int ledPin2 = 13;
 
 int counter = 0;
-const int buzzerPin = A5;
 
 // void setup()
 // {
 //   //Setup pin modes
-   pinMode(buzzerPin, OUTPUT);
-//   // pinMode(ledPin1, OUTPUT);
-//   // pinMode(ledPin2, OUTPUT);
+//   pinMode(buzzerPin, OUTPUT);
+//   pinMode(ledPin1, OUTPUT);
+//   pinMode(ledPin2, OUTPUT);
 // }
+
+
 void beep(int note, int duration)
 {
   //Play tone on buzzerPin
   tone(buzzerPin, note, duration);
 
   //Play different LED depending on value of 'counter'
-  // if(counter % 2 == 0)
-  // {
-  //   digitalWrite(ledPin1, HIGH);
-  //   delay(duration);
-  //   digitalWrite(ledPin1, LOW);
-  // }else
-  // {
-  //   digitalWrite(ledPin2, HIGH);
-  //   delay(duration);
-  //   digitalWrite(ledPin2, LOW);
-  // }
+  if(counter % 2 == 0)
+  {
+    digitalWrite(ledPin1, HIGH);
+    delay(duration);
+    digitalWrite(ledPin1, LOW);
+  }else
+  {
+    digitalWrite(ledPin2, HIGH);
+    delay(duration);
+    digitalWrite(ledPin2, LOW);
+  }
 
   //Stop tone on buzzerPin
   noTone(buzzerPin);
