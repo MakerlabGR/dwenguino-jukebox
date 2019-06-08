@@ -33,14 +33,28 @@ void loop(){
 
 void setup(){
     initDwenguino();
-    
+
     dwenguinoLCD.setCursor(0,0);
     dwenguinoLCD.print(String("The Robots"));
     dwenguinoLCD.setCursor(0,1);
     dwenguinoLCD.print(String("Kraftwerk"));
-    
+
     pinMode(speakerPin, OUTPUT);
     Serial.begin(9600);
+
+    rest(WHOLENOTE);
+    rest(WHOLENOTE);
+    rest(WHOLENOTE);
+    rest(WHOLENOTE);
+    rest(WHOLENOTE);
+    rest(WHOLENOTE);
+    rest(WHOLENOTE);
+    rest(WHOLENOTE);
+    rest(WHOLENOTE);
+    rest(WHOLENOTE);
+    rest(WHOLENOTE);
+    rest(WHOLENOTE);
+
 }
 
 void spacedNote(int frequencyInHertz, int noteLength)

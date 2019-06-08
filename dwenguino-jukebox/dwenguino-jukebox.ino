@@ -12,10 +12,11 @@
 #include "furelise.h"
 #include "jeopardy.h"
 // #include "rickroll.h"
-#include "starwars.h" 
+#include "starwars.h"
 #include "supermario.h"
 #include "tetris.h"
 #include "robots.h"
+#include "megalovania.h"
 
 
 // int m=map(m,0,2,0,2);
@@ -47,7 +48,7 @@ void setup()
 
 void loop()
 {
-  m=constrain(m, 0, 9); 
+  m=constrain(m, 0, 10);
 
   buttonState_S = digitalRead(SW_S);
   buttonState_N = digitalRead(SW_N);
@@ -113,7 +114,7 @@ void loop()
     dwenguinoLCD.setCursor(0,0);
     dwenguinoLCD.print(String("Pirates of the"));
     dwenguinoLCD.setCursor(0,1);
-    dwenguinoLCD.print(String("Carrabean")); 
+    dwenguinoLCD.print(String("Carrabean"));
    }
     if (n==2){
       for (int i=0; i<500; i++){
@@ -173,19 +174,29 @@ void loop()
 
     if (m==8){
    dwenguinoLCD.setCursor(0,0);
-   dwenguinoLCD.print(String("The Robots 1"));
+   dwenguinoLCD.print(String("Megalovania"));
     }
     if (n==8){
        for (int i=0; i<500; i++){
-          robots1();
+          megalovania();
       }
     }
 
     if (m==9){
    dwenguinoLCD.setCursor(0,0);
-   dwenguinoLCD.print(String("The Robots 2"));
+   dwenguinoLCD.print(String("The Robots 1"));
     }
     if (n==9){
+       for (int i=0; i<500; i++){
+          robots1();
+      }
+    }
+
+    if (m==10){
+   dwenguinoLCD.setCursor(0,0);
+   dwenguinoLCD.print(String("The Robots 2"));
+    }
+    if (n==10){
        for (int i=0; i<500; i++){
           robots2();
       }

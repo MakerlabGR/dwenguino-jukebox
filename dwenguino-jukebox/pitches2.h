@@ -15,7 +15,7 @@
 #define  f5s    740     // 740 Hz
 #define  a5f    831     // 831 Hz
 
-#define rest    -1
+//#define rest    -1/
 
 // int a = 4;
 // int b = 0;

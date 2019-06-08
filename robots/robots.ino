@@ -54,7 +54,7 @@ void setup(){
     initDwenguino();
     
     dwenguinoLCD.setCursor(0,0);
-    dwenguinoLCD.print(String("The Robots"));
+    dwenguinoLCD.print(String("The Robots 1"));
     dwenguinoLCD.setCursor(0,1);
     dwenguinoLCD.print(String("Kraftwerk"));
     
