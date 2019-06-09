@@ -1,34 +1,34 @@
 void robots1(){
-    spacedNote(NOTE_D3, SIXTEENTHNOTE);
-    spacedNote(NOTE_D3, SIXTEENTHNOTE);
-    spacedNote(NOTE_C3, SIXTEENTHNOTE);
-    spacedNote(NOTE_C3, SIXTEENTHNOTE);
-    spacedNote(NOTE_D3, SIXTEENTHNOTE);
-    spacedNote(NOTE_D3, SIXTEENTHNOTE);
-    spacedNote(NOTE_C3, SIXTEENTHNOTE);
-    spacedNote(NOTE_C3, SIXTEENTHNOTE);
-    spacedNote(NOTE_D3, SIXTEENTHNOTE);
-    spacedNote(NOTE_D3, SIXTEENTHNOTE);
+    spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
+    spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
+    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin2);
+    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin2);
+    spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
+    spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
+    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin2);
+    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin2);
+    spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
+    spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
     rest(EIGHTHNOTE);
 
-    spacedNote(NOTE_F3, SIXTEENTHNOTE);
-    spacedNote(NOTE_F3, SIXTEENTHNOTE);
+    spacedNote(NOTE_F3, SIXTEENTHNOTE, ledpin3);
+    spacedNote(NOTE_F3, SIXTEENTHNOTE, ledpin3);
     rest(EIGHTHNOTE);
 
-    spacedNote(NOTE_D3, SIXTEENTHNOTE);
-    spacedNote(NOTE_D3, SIXTEENTHNOTE);
-    spacedNote(NOTE_C3, SIXTEENTHNOTE);
-    spacedNote(NOTE_C3, SIXTEENTHNOTE);
-    spacedNote(NOTE_D3, SIXTEENTHNOTE);
-    spacedNote(NOTE_D3, SIXTEENTHNOTE);
-    spacedNote(NOTE_C3, SIXTEENTHNOTE);
-    spacedNote(NOTE_C3, SIXTEENTHNOTE);
-    spacedNote(NOTE_D3, SIXTEENTHNOTE);
-    spacedNote(NOTE_D3, SIXTEENTHNOTE);
-    spacedNote(NOTE_D3, SIXTEENTHNOTE);
-    spacedNote(NOTE_D3, SIXTEENTHNOTE);
-    spacedNote(NOTE_D3, SIXTEENTHNOTE);
-    spacedNote(NOTE_D3, SIXTEENTHNOTE);
+    spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
+    spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
+    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin2);
+    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin2);
+    spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
+    spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
+    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin2);
+    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin2);
+    spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
+    spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
+    spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
+    spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
+    spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
+    spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
 
 
     rest(EIGHTHNOTE);
@@ -39,18 +39,18 @@ void robots1(){
 }
 
 void robots2(){
-    spacedNote(NOTE_D3, EIGHTHNOTE);
+    spacedNote(NOTE_D3, EIGHTHNOTE, ledpin1);
     rest(QUARTERNOTE);
 
-    spacedNote(NOTE_D3, EIGHTHNOTE);
-    spacedNote(NOTE_F3, EIGHTHNOTE);
-    spacedNote(NOTE_D3, EIGHTHNOTE);
+    spacedNote(NOTE_D3, EIGHTHNOTE, ledpin1);
+    spacedNote(NOTE_F3, EIGHTHNOTE, ledpin3);
+    spacedNote(NOTE_D3, EIGHTHNOTE, ledpin1);
     rest(QUARTERNOTE);
 
-    spacedNote(NOTE_F4, QUARTERNOTE);
-    spacedNote(NOTE_G4, EIGHTHNOTE);
-    spacedNote(NOTE_C5, EIGHTHNOTE);
-    spacedNote(NOTE_A4, EIGHTHNOTE);
+    spacedNote(NOTE_F4, QUARTERNOTE, ledpin1);
+    spacedNote(NOTE_G4, EIGHTHNOTE, ledpin2);
+    spacedNote(NOTE_C5, EIGHTHNOTE, ledpin3);
+    spacedNote(NOTE_A4, EIGHTHNOTE, ledpin1);
     rest(DOTTEDQUARTERNOTE);
     // rest(EIGHTHNOTE);
 

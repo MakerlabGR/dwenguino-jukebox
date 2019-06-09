@@ -6,9 +6,9 @@
 
 
 bool strobe_effect = false;
-int ledpin1 = 25;
+int ledpin1 = 27;
 int ledpin2 = 26;
-int ledpin3 = 27;
+int ledpin3 = 25;
 int speakerPin = A5;
 float tempo = 115.5;
 
@@ -64,28 +64,28 @@ void setup(){
 void loop(){
     spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
     spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
-    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin1);
-    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin1);
+    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin2);
+    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin2);
     spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
     spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
-    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin1);
-    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin1);
+    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin2);
+    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin2);
     spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
     spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
     rest(EIGHTHNOTE);
 
-    spacedNote(NOTE_F3, SIXTEENTHNOTE, ledpin2);
-    spacedNote(NOTE_F3, SIXTEENTHNOTE, ledpin2);
+    spacedNote(NOTE_F3, SIXTEENTHNOTE, ledpin3);
+    spacedNote(NOTE_F3, SIXTEENTHNOTE, ledpin3);
     rest(EIGHTHNOTE);
 
     spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
     spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
-    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin1);
-    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin1);
+    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin2);
+    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin2);
     spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
     spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
-    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin1);
-    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin1);
+    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin2);
+    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin2);
     spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
     spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
     spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);

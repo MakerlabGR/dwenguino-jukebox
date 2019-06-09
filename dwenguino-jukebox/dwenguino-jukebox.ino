@@ -7,6 +7,15 @@
 #include "pitches3.h"
 #include "pitches4.h"
 
+int ledpin1 = 27;
+int ledpin2 = 26;
+int ledpin3 = 25;
+int ledpin4 = 28;
+int ledpin5 = 29;
+int ledpin6 = 30;
+int ledpin7 = 31;
+int ledpin8 = 32;
+
 #include "gameofthrones.h"
 #include "carrabean.h"
 #include "furelise.h"
@@ -20,6 +29,7 @@
 
 
 // int m=map(m,0,2,0,2);
+
 int m;
 int n;
 
@@ -32,10 +42,12 @@ int lastButtonState_C = 0;
 
 void setup()
 {
+  initDwenguino();
   pinMode(BUZZER, OUTPUT);
   pinMode(PIEZO_PIN, OUTPUT);
-
-  initDwenguino();
+  pinMode(ledpin1, OUTPUT);
+  pinMode(ledpin2, OUTPUT);
+  pinMode(ledpin3, OUTPUT);
   // dwenguinoLCD.setCursor(0,0);
   // dwenguinoLCD.print(String("Dwenguino"));
   // dwenguinoLCD.setCursor(8,1);

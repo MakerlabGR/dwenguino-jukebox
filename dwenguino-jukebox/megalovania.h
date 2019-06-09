@@ -2,7 +2,7 @@
 // Program written by Peter Schaedler, 2016
 
 #define buzz A5
-#define led 13
+#define led 25
 #define beat 500 // = 60 s / 120 bpm * 1000 ms
 
 #define cnat 16.35

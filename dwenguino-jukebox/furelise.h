@@ -3,20 +3,23 @@
     int tempo = 120;
     boolean continuePlaying = true; //Set to true to continuously play (otherwise, false)
     int continueDelay = 0; //Time to wait before continuing playing
-    
-    void spacedNote(int frequencyInHertz, int noteLength)
-    {
+
+    void spacedNote(int frequencyInHertz, int noteLength, int ledpin) {
       tone(speakerPin, frequencyInHertz);
-      float delayTime = (1000/tempo) * (60/4) * noteLength;
+      analogWrite(ledpin, 255);
+      float delayTime = (1000.0/tempo) * (60.0/4) * noteLength;
       delay(delayTime - 50);
+      analogWrite(ledpin, 0);
       noTone(speakerPin);
       delay(50);
     }
-    void note(int frequencyInHertz, int noteLength)  //Code to take care of the note
+    void note(int frequencyInHertz, int noteLength, int ledpin)  //Code to take care of the note
     {
       tone(speakerPin, frequencyInHertz);
+      analogWrite(ledpin, 255);
       float delayTime = (1000/tempo) * (60/4) * noteLength;
       delay(delayTime);
+      analogWrite(ledpin, 0);
     }
     void rest(int restLength)
     {
@@ -31,101 +34,101 @@
       //note(NOTE_G5, HALFNOTE);
 
       //Measure 1
-      note(NOTE_E6, EIGHTHNOTE);
-      note(NOTE_DS6, EIGHTHNOTE);
+      note(NOTE_E6, EIGHTHNOTE, ledpin1);
+      note(NOTE_DS6, EIGHTHNOTE, ledpin2);
 
       //Measure 2
-      note(NOTE_E6, EIGHTHNOTE);
-      note(NOTE_DS6, EIGHTHNOTE);
-      note(NOTE_E6, EIGHTHNOTE);
-      note(NOTE_B5, EIGHTHNOTE);
-      note(NOTE_D6, EIGHTHNOTE);
-      note(NOTE_C6, EIGHTHNOTE);
+      note(NOTE_E6, EIGHTHNOTE, ledpin1);
+      note(NOTE_DS6, EIGHTHNOTE, ledpin2);
+      note(NOTE_E6, EIGHTHNOTE, ledpin1);
+      note(NOTE_B5, EIGHTHNOTE, ledpin3);
+      note(NOTE_D6, EIGHTHNOTE, ledpin2);
+      note(NOTE_C6, EIGHTHNOTE, ledpin2);
 
       //Measure 3
-      note(NOTE_A3, EIGHTHNOTE);
-      note(NOTE_E4, EIGHTHNOTE);
-      note(NOTE_A4, EIGHTHNOTE);
-      note(NOTE_C5, EIGHTHNOTE);
-      note(NOTE_E5, EIGHTHNOTE);
-      note(NOTE_A5, EIGHTHNOTE);
+      note(NOTE_A3, EIGHTHNOTE, ledpin1);
+      note(NOTE_E4, EIGHTHNOTE, ledpin2);
+      note(NOTE_A4, EIGHTHNOTE, ledpin3);
+      note(NOTE_C5, EIGHTHNOTE, ledpin1);
+      note(NOTE_E5, EIGHTHNOTE, ledpin3);
+      note(NOTE_A5, EIGHTHNOTE, ledpin1);
 
       //Measure 4
-      note(NOTE_E3, EIGHTHNOTE);
-      note(NOTE_E4, EIGHTHNOTE);
-      note(NOTE_GS4, EIGHTHNOTE);
-      note(NOTE_E5, EIGHTHNOTE);
-      note(NOTE_GS5, EIGHTHNOTE);
-      note(NOTE_B5, EIGHTHNOTE);
+      note(NOTE_E3, EIGHTHNOTE, ledpin3);
+      note(NOTE_E4, EIGHTHNOTE, ledpin2);
+      note(NOTE_GS4, EIGHTHNOTE, ledpin1);
+      note(NOTE_E5, EIGHTHNOTE, ledpin3);
+      note(NOTE_GS5, EIGHTHNOTE, ledpin2);
+      note(NOTE_B5, EIGHTHNOTE, ledpin3);
 
       //Measure 5
-      note(NOTE_A3, EIGHTHNOTE);
-      note(NOTE_E4, EIGHTHNOTE);
-      note(NOTE_A4, EIGHTHNOTE);
-      note(NOTE_E5, EIGHTHNOTE);
-      note(NOTE_E6, EIGHTHNOTE);
-      note(NOTE_DS6, EIGHTHNOTE);
+      note(NOTE_A3, EIGHTHNOTE, ledpin1);
+      note(NOTE_E4, EIGHTHNOTE, ledpin2);
+      note(NOTE_A4, EIGHTHNOTE, ledpin3);
+      note(NOTE_E5, EIGHTHNOTE, ledpin3);
+      note(NOTE_E6, EIGHTHNOTE, ledpin1);
+      note(NOTE_DS6, EIGHTHNOTE, ledpin2);
 
       //Measure 6
-      note(NOTE_E6, EIGHTHNOTE);
-      note(NOTE_DS6, EIGHTHNOTE);
-      note(NOTE_E6, EIGHTHNOTE);
-      note(NOTE_B5, EIGHTHNOTE);
-      note(NOTE_D6, EIGHTHNOTE);
-      note(NOTE_C6, EIGHTHNOTE);
+      note(NOTE_E6, EIGHTHNOTE, ledpin1);
+      note(NOTE_DS6, EIGHTHNOTE, ledpin2);
+      note(NOTE_E6, EIGHTHNOTE, ledpin1);
+      note(NOTE_B5, EIGHTHNOTE, ledpin3);
+      note(NOTE_D6, EIGHTHNOTE, ledpin2);
+      note(NOTE_C6, EIGHTHNOTE, ledpin2);
 
       //Measure 7
-      note(NOTE_A3, EIGHTHNOTE);
-      note(NOTE_E4, EIGHTHNOTE);
-      note(NOTE_A4, EIGHTHNOTE);
-      note(NOTE_C5, EIGHTHNOTE);
-      note(NOTE_E5, EIGHTHNOTE);
-      note(NOTE_A5, EIGHTHNOTE);
+      note(NOTE_A3, EIGHTHNOTE, ledpin1);
+      note(NOTE_E4, EIGHTHNOTE, ledpin2);
+      note(NOTE_A4, EIGHTHNOTE, ledpin3);
+      note(NOTE_C5, EIGHTHNOTE, ledpin1);
+      note(NOTE_E5, EIGHTHNOTE, ledpin3);
+      note(NOTE_A5, EIGHTHNOTE, ledpin1);
 
       //Measure 8
-      note(NOTE_E3, EIGHTHNOTE);
-      note(NOTE_E4, EIGHTHNOTE);
-      note(NOTE_GS4, EIGHTHNOTE);
-      note(NOTE_E5, EIGHTHNOTE);
-      note(NOTE_GS5, EIGHTHNOTE);
-      note(NOTE_B5, EIGHTHNOTE);
+      note(NOTE_E3, EIGHTHNOTE, ledpin1);
+      note(NOTE_E4, EIGHTHNOTE, ledpin2);
+      note(NOTE_GS4, EIGHTHNOTE, ledpin1);
+      note(NOTE_E5, EIGHTHNOTE, ledpin3);
+      note(NOTE_GS5, EIGHTHNOTE, ledpin2);
+      note(NOTE_B5, EIGHTHNOTE, ledpin3);
 
       //Measure 9
-      note(NOTE_A3, EIGHTHNOTE);
-      note(NOTE_E4, EIGHTHNOTE);
-      note(NOTE_A4, EIGHTHNOTE);
-      note(NOTE_E5, EIGHTHNOTE);
-      note(NOTE_C6, EIGHTHNOTE);
-      note(NOTE_D6, EIGHTHNOTE);
+      note(NOTE_A3, EIGHTHNOTE, ledpin1);
+      note(NOTE_E4, EIGHTHNOTE, ledpin2);
+      note(NOTE_A4, EIGHTHNOTE, ledpin3);
+      note(NOTE_E5, EIGHTHNOTE, ledpin3);
+      note(NOTE_C6, EIGHTHNOTE, ledpin2);
+      note(NOTE_D6, EIGHTHNOTE, ledpin2);
 
       //Measure 10
-      note(NOTE_C4, EIGHTHNOTE);
-      note(NOTE_G4, EIGHTHNOTE);
-      note(NOTE_C5, EIGHTHNOTE);
-      note(NOTE_G5, EIGHTHNOTE);
-      note(NOTE_F6, EIGHTHNOTE);
-      note(NOTE_E6, EIGHTHNOTE);
+      note(NOTE_C4, EIGHTHNOTE, ledpin2);
+      note(NOTE_G4, EIGHTHNOTE, ledpin3);
+      note(NOTE_C5, EIGHTHNOTE, ledpin1);
+      note(NOTE_G5, EIGHTHNOTE, ledpin2);
+      note(NOTE_F6, EIGHTHNOTE, ledpin3);
+      note(NOTE_E6, EIGHTHNOTE, ledpin1);
 
       //Measure 11
-      note(NOTE_G3, EIGHTHNOTE);
-      note(NOTE_G4, EIGHTHNOTE);
-      note(NOTE_B4, EIGHTHNOTE);
-      note(NOTE_F5, EIGHTHNOTE);
-      note(NOTE_E6, EIGHTHNOTE);
-      note(NOTE_D6, EIGHTHNOTE);
+      note(NOTE_G3, EIGHTHNOTE, ledpin2);
+      note(NOTE_G4, EIGHTHNOTE, ledpin3);
+      note(NOTE_B4, EIGHTHNOTE, ledpin1);
+      note(NOTE_F5, EIGHTHNOTE, ledpin2);
+      note(NOTE_E6, EIGHTHNOTE, ledpin1);
+      note(NOTE_D6, EIGHTHNOTE, ledpin2);
 
       //Measure 12
-      note(NOTE_A3, EIGHTHNOTE);
-      note(NOTE_E4, EIGHTHNOTE);
-      note(NOTE_A4, EIGHTHNOTE);
-      note(NOTE_E5, EIGHTHNOTE);
-      note(NOTE_D6, EIGHTHNOTE);
-      note(NOTE_C6, EIGHTHNOTE);
+      note(NOTE_A3, EIGHTHNOTE, ledpin1);
+      note(NOTE_E4, EIGHTHNOTE, ledpin2);
+      note(NOTE_A4, EIGHTHNOTE, ledpin3);
+      note(NOTE_E5, EIGHTHNOTE, ledpin3);
+      note(NOTE_D6, EIGHTHNOTE, ledpin2);
+      note(NOTE_C6, EIGHTHNOTE, ledpin2);
 
       //Measure 13
-      note(NOTE_E3, EIGHTHNOTE);
-      note(NOTE_E4, EIGHTHNOTE);
-      note(NOTE_A5, EIGHTHNOTE);
+      note(NOTE_E3, EIGHTHNOTE, ledpin3);
+      note(NOTE_E4, EIGHTHNOTE, ledpin2);
+      note(NOTE_A5, EIGHTHNOTE, ledpin1);
       rest(EIGHTHNOTE);
 
 
