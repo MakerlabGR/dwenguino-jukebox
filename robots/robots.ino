@@ -9,7 +9,7 @@ int ledpin1 = 27;
 int ledpin2 = 26;
 int ledpin3 = 25;
 int speakerPin = A5;
-float tempo = 116.0;
+float tempo = 115.0;
 
 void rest(int restLength) {
     noTone(speakerPin);
