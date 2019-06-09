@@ -11,20 +11,27 @@ boolean continuePlaying = true; //Set to true to continuously play (otherwise, f
 int continueDelay = 0; //Time to wait before continuing playing
 
 void loop(){
-    spacedNote(NOTE_D3, EIGHTHNOTE);
-    rest(QUARTERNOTE);
+    spacedNote(NOTE_D2, EIGHTHNOTE);
+    spacedNote(NOTE_C2, EIGHTHNOTE);
+    spacedNote(NOTE_D2, EIGHTHNOTE);
+    spacedNote(NOTE_C2, EIGHTHNOTE);
+    spacedNote(NOTE_D2, SIXTEENTHNOTE);
+    spacedNote(NOTE_D2, SIXTEENTHNOTE);
+    rest(EIGHTHNOTE);
 
-    spacedNote(NOTE_D3, EIGHTHNOTE);
-    spacedNote(NOTE_F3, EIGHTHNOTE);
-    spacedNote(NOTE_D3, EIGHTHNOTE);
-    rest(QUARTERNOTE);
+    spacedNote(NOTE_F2, SIXTEENTHNOTE);
+    spacedNote(NOTE_F2, SIXTEENTHNOTE);
+    rest(EIGHTHNOTE);
 
-    spacedNote(NOTE_F4, QUARTERNOTE);
-    spacedNote(NOTE_G4, EIGHTHNOTE);
-    spacedNote(NOTE_C5, EIGHTHNOTE);
-    spacedNote(NOTE_A4, EIGHTHNOTE);
-    rest(DOTTEDQUARTERNOTE);
-    // rest(EIGHTHNOTE);
+    spacedNote(NOTE_D2, EIGHTHNOTE);
+    spacedNote(NOTE_C2, EIGHTHNOTE);
+    spacedNote(NOTE_D2, EIGHTHNOTE);
+    spacedNote(NOTE_C2, EIGHTHNOTE);
+    spacedNote(NOTE_D2, EIGHTHNOTE);
+    spacedNote(NOTE_D2, EIGHTHNOTE);
+
+
+    rest(QUARTERNOTE);
 
   noTone(speakerPin);
   while(continuePlaying == false);
@@ -35,29 +42,13 @@ void setup(){
     initDwenguino();
 
     dwenguinoLCD.setCursor(0,0);
-    dwenguinoLCD.print(String("The Robots 2"));
+    dwenguinoLCD.print(String("The Robots 3"));
     // dwenguinoLCD.setCursor(0,1);
     // dwenguinoLCD.print(String("Kraftwerk"));
 
     pinMode(speakerPin, OUTPUT);
     Serial.begin(9600);
 
-    dwenguinoLCD.setCursor(0,1);
-    dwenguinoLCD.print(String("Measures left: 6"));
-    rest(WHOLENOTE);
-    rest(WHOLENOTE);
-    dwenguinoLCD.setCursor(0,1);
-    dwenguinoLCD.print(String("Measures left: 5"));
-    rest(WHOLENOTE);
-    rest(WHOLENOTE);
-    dwenguinoLCD.setCursor(0,1);
-    dwenguinoLCD.print(String("Measures left: 4"));
-    rest(WHOLENOTE);
-    rest(WHOLENOTE);
-    dwenguinoLCD.setCursor(0,1);
-    dwenguinoLCD.print(String("Measures left: 3"));
-    rest(WHOLENOTE);
-    rest(WHOLENOTE);
     dwenguinoLCD.setCursor(0,1);
     dwenguinoLCD.print(String("Measures left: 2"));
     rest(WHOLENOTE);
@@ -66,6 +57,11 @@ void setup(){
     dwenguinoLCD.print(String("Measures left: 1"));
     rest(WHOLENOTE);
     rest(WHOLENOTE);
+    // dwenguinoLCD.setCursor(0,1);
+    // dwenguinoLCD.print(String("Measures left: 1"));
+    // rest(WHOLENOTE);
+    // rest(WHOLENOTE);
+
     dwenguinoLCD.clear();
     dwenguinoLCD.print(String("The Robots"));
     dwenguinoLCD.setCursor(0,1);
