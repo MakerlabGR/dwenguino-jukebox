@@ -4,14 +4,12 @@
 
 #include "pitches1.h"
 
-
 bool strobe_effect = false;
 int ledpin1 = 27;
 int ledpin2 = 26;
 int ledpin3 = 25;
 int speakerPin = A5;
-float tempo = 115.5;
-
+float tempo = 116.0;
 
 void rest(int restLength) {
     noTone(speakerPin);
@@ -20,19 +18,19 @@ void rest(int restLength) {
 }
 
 void spacedNote(int frequencyInHertz, int noteLength, int ledpin) {
-    if (digitalRead(SW_E) == PRESSED) {
-        while(digitalRead(SW_E) == PRESSED) {
-            delay(10);
-        }
-        strobe_effect = !strobe_effect;
-    }
+    // if (digitalRead(SW_E) == PRESSED) {
+    //     while(digitalRead(SW_E) == PRESSED) {
+    //         delay(10);
+    //     }
+    //     strobe_effect = !strobe_effect;
+    // }
 
-    tempo = analogRead(A0);
-    long outputValue = map(tempo, 0, 1023, 500, 2000);
-    tempo = outputValue/10.0;
+    // tempo = analogRead(A0);
+    // long outputValue = map(tempo, 0, 1023, 1140, 1180);
+    // tempo = outputValue/10.0;
     // Serial.println(strobe_effect);
-    dwenguinoLCD.setCursor(0,1);
-    dwenguinoLCD.print(tempo);
+    // dwenguinoLCD.setCursor(0,1);
+    // dwenguinoLCD.print(tempo);
 
     tone(speakerPin, frequencyInHertz);
 
