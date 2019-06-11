@@ -7,12 +7,12 @@
 #include "pitches3.h"
 #include "pitches4.h"
 
-//int ledpin1 = 27;
-//int ledpin2 = 25;
-//int ledpin3 = 26;
-int ledpin1 = 36;
-int ledpin2 = 35;
-int ledpin3 = 34;
+int ledpin1 = 27;
+int ledpin2 = 25;
+int ledpin3 = 26;
+// int ledpin1 = 36;
+// int ledpin2 = 35;
+// int ledpin3 = 34;
 
 int ledpin4 = 28;
 int ledpin5 = 29;
@@ -25,6 +25,7 @@ int ledpin8 = 32;
 #include "furelise.h"
 // #include "clairdalune.h"
 // #include "legendofzelda.h"
+#include "zelda.h"
 #include "supersmashbros.h"
 #include "jeopardy.h"
 #include "starwars.h"
@@ -60,7 +61,7 @@ void setup()
 
 void loop()
 {
-  m=constrain(m, 0, 11);
+  m=constrain(m, 0, 12);
 
   buttonState_S = digitalRead(SW_S);
   buttonState_N = digitalRead(SW_N);
@@ -204,17 +205,29 @@ if (m==4){
       }
     }
 
-    if (m==10){
+       if (m==10){
+   dwenguinoLCD.setCursor(0,0);
+   dwenguinoLCD.print(String("Legend Of Zelda"));
+   dwenguinoLCD.setCursor(0,1);
+   dwenguinoLCD.print(String("Ending Theme"));
+    }
+    if (n==10){
+       for (int i=0; i<500; i++){
+          zelda();
+      }
+    }
+
+    if (m==11){
    dwenguinoLCD.setCursor(0,0);
    dwenguinoLCD.print(String("The Robots 1"));
     }
-    if (n==10){
+    if (n==11){
        for (int i=0; i<500; i++){
           robots1();
       }
     }
 
-    if (m==11){
+    if (m==12){
    dwenguinoLCD.setCursor(0,0);
    dwenguinoLCD.print(String("The Robots 2"));
     }

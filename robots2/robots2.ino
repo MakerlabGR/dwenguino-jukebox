@@ -93,7 +93,7 @@ void setup(){
     // rest(WHOLENOTE);
 
     dwenguinoLCD.clear();
-    dwenguinoLCD.print(String("The Robots"));
+    dwenguinoLCD.print(String("The Robots 2"));
     dwenguinoLCD.setCursor(0,1);
     dwenguinoLCD.print(String("Kraftwerk"));
 
