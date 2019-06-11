@@ -120,7 +120,7 @@ int underworld_tempo[] = {
 // }
 
 void buzz(int targetPin, long frequency, long length) {
-  digitalWrite(13, HIGH);
+  digitalWrite(ledpin3, HIGH);
   long delayValue = 1000000 / frequency / 2; // calculate the delay value between transitions
   //// 1 second's worth of microseconds, divided by the frequency, then split in half since
   //// there are two phases to each cycle
@@ -133,6 +133,7 @@ void buzz(int targetPin, long frequency, long length) {
     digitalWrite(targetPin, LOW); // write the buzzer pin low to pull back the diaphram
     delayMicroseconds(delayValue); // wait again or the calculated delay value
   }
+  digitalWrite(ledpin3, LOW);
 }
 
 int song = 0;
@@ -187,7 +188,6 @@ void sing(int s) {
   }
 }
 
-  // digitalWrite(13, LOW);
 
 void supermario()
 {

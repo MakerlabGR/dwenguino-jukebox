@@ -1,6 +1,6 @@
 const int buzzerPin = A5;
-const int ledPin1 = 12;
-const int ledPin2 = 13;
+// const int ledpin1 = 12;
+// const int ledpin2 = 13;
 
 int counter = 0;
 
@@ -8,8 +8,8 @@ int counter = 0;
 // {
 //   //Setup pin modes
 //   pinMode(buzzerPin, OUTPUT);
-//   pinMode(ledPin1, OUTPUT);
-//   pinMode(ledPin2, OUTPUT);
+//   pinMode(ledpin1, OUTPUT);
+//   pinMode(ledpin2, OUTPUT);
 // }
 
 
@@ -21,14 +21,14 @@ void beep(int note, int duration)
   //Play different LED depending on value of 'counter'
   if(counter % 2 == 0)
   {
-    digitalWrite(ledPin1, HIGH);
+    digitalWrite(ledpin1, HIGH);
     delay(duration);
-    digitalWrite(ledPin1, LOW);
+    digitalWrite(ledpin1, LOW);
   }else
   {
-    digitalWrite(ledPin2, HIGH);
+    digitalWrite(ledpin2, HIGH);
     delay(duration);
-    digitalWrite(ledPin2, LOW);
+    digitalWrite(ledpin2, LOW);
   }
 
   //Stop tone on buzzerPin

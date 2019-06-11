@@ -6,8 +6,14 @@
 
 bool strobe_effect = false;
 int ledpin1 = 27;
-int ledpin2 = 26;
-int ledpin3 = 25;
+int ledpin2 = 25;
+int ledpin3 = 26;
+
+//comment out to enable onboard dwenguino leds:
+// int ledpin1 = 36;
+// int ledpin2 = 35;
+// int ledpin3 = 34;
+
 int speakerPin = A5;
 float tempo = 115.0;
 
@@ -54,7 +60,7 @@ void setup(){
     pinMode(speakerPin, OUTPUT);
     pinMode(A0, INPUT);
     pinMode(ledpin1, OUTPUT);
-    pinMode(ledpin2, OUTPUT);
+    pinMode(ledpin3, OUTPUT);
     pinMode(ledpin3, OUTPUT);
     // Serial.begin(9600);
 }
@@ -62,28 +68,28 @@ void setup(){
 void loop(){
     spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
     spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
-    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin2);
-    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin2);
+    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin3);
+    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin3);
     spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
     spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
-    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin2);
-    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin2);
+    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin3);
+    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin3);
     spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
     spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
     rest(EIGHTHNOTE);
 
-    spacedNote(NOTE_F3, SIXTEENTHNOTE, ledpin3);
-    spacedNote(NOTE_F3, SIXTEENTHNOTE, ledpin3);
+    spacedNote(NOTE_F3, SIXTEENTHNOTE, ledpin2);
+    spacedNote(NOTE_F3, SIXTEENTHNOTE, ledpin2);
     rest(EIGHTHNOTE);
 
     spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
     spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
-    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin2);
-    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin2);
+    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin3);
+    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin3);
     spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
     spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
-    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin2);
-    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin2);
+    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin3);
+    spacedNote(NOTE_C3, SIXTEENTHNOTE, ledpin3);
     spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
     spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);
     spacedNote(NOTE_D3, SIXTEENTHNOTE, ledpin1);

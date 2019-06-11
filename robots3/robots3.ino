@@ -6,8 +6,14 @@
 
 bool strobe_effect = false;
 int ledpin1 = 27;
-int ledpin2 = 26;
-int ledpin3 = 25;
+int ledpin2 = 25;
+int ledpin3 = 26;
+
+//comment out to enable onboard dwenguino leds:
+// int ledpin1 = 36;
+// int ledpin2 = 35;
+// int ledpin3 = 34;
+
 int speakerPin = A5;
 float tempo = 115.0;
 
@@ -92,7 +98,7 @@ void loop(){
     rest(QUARTERNOTE);
 
     spacedNote(NOTE_D3, EIGHTHNOTE, ledpin1);
-    spacedNote(NOTE_F3, EIGHTHNOTE, ledpin3);
+    spacedNote(NOTE_F3, EIGHTHNOTE, ledpin2);
     spacedNote(NOTE_D3, EIGHTHNOTE, ledpin1);
     rest(QUARTERNOTE);
 
