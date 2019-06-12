@@ -26,9 +26,9 @@ void beep(int note, int duration)
     digitalWrite(ledpin1, LOW);
   }else
   {
-    digitalWrite(ledpin2, HIGH);
+    digitalWrite(ledpin3, HIGH);
     delay(duration);
-    digitalWrite(ledpin2, LOW);
+    digitalWrite(ledpin3, LOW);
   }
 
   //Stop tone on buzzerPin

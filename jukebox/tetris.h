@@ -1,3 +1,4 @@
+
 // By Luke Cyca
 // https://lukecyca.com
 // https://github.com/lukecyca/TetrisThemeArduino
@@ -8,8 +9,8 @@
 #define _R     (0)
 
 // beats per minute
-#define BPM   (120.0)
-
+// #define BPM   (120.0)
+float BPM = 120;
 
 float lead_notes[] = {
   // part 1
@@ -57,16 +58,31 @@ float bass_times[] = {
 
 // duration is in microseconds
 void play_one_note(float frequency, unsigned long duration) {
-  unsigned long period = 1000000.0/frequency;
+    if (digitalRead(SW_E) == PRESSED) {
+    while(digitalRead(SW_E) == PRESSED) {
+      delay(10);
+    }
+    strobe_effect = !strobe_effect;
+  }
+  BPM = analogRead(A0);
+  long outputValue = map(BPM, 0, 1023, 500, 2000);
+  BPM = outputValue/10.0;
+  dwenguinoLCD.setCursor(0,1);
+  dwenguinoLCD.print(String("Tempo: "));
+  dwenguinoLCD.setCursor(8,1);
+  dwenguinoLCD.print(BPM);
 
+  unsigned long period = 1000000.0/frequency;
   for (unsigned int cycles=duration/period; cycles>0; cycles--) {
     // half the time on
     digitalWrite(PIEZO_PIN, HIGH);
     delayMicroseconds( period/2 );
+  analogWrite(ledpin1, 255);
 
     // half the time off
     digitalWrite(PIEZO_PIN, LOW);
     delayMicroseconds( period/2 );
+  analogWrite(ledpin1, 0);
   }
 
   // If the duration wasn't a multiple of the period, delay the remainder
@@ -79,10 +95,28 @@ void play_one_note(float frequency, unsigned long duration) {
 
 // duration is in microseconds
 void play_two_notes(float freq1, float freq2, unsigned long duration) {
+      if (digitalRead(SW_E) == PRESSED) {
+    while(digitalRead(SW_E) == PRESSED) {
+      delay(10);
+    }
+    strobe_effect = !strobe_effect;
+  }
+  BPM = analogRead(A0);
+  long outputValue = map(BPM, 0, 1023, 500, 2000);
+  BPM = outputValue/10.0;
+  dwenguinoLCD.setCursor(0,1);
+  dwenguinoLCD.print(String("Tetris: "));
+  dwenguinoLCD.setCursor(8,1);
+  dwenguinoLCD.print(BPM);
+  analogWrite(ledpin2, 255);
+  analogWrite(ledpin3, 255);
     for (unsigned long t=0; t<duration; t+=2*POLY_DELTA) {
       play_one_note(freq1, POLY_DELTA);
       play_one_note(freq2, POLY_DELTA);
     }
+  analogWrite(ledpin2, 0);
+  analogWrite(ledpin3, 0);
+
 }
 
 int lead_note_count = sizeof(lead_notes) / sizeof(float);

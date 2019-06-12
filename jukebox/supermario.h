@@ -121,6 +121,9 @@ int underworld_tempo[] = {
 
 void buzz(int targetPin, long frequency, long length) {
   digitalWrite(ledpin3, HIGH);
+  digitalWrite(ledpin2, HIGH);
+  digitalWrite(ledpin1, HIGH);
+
   long delayValue = 1000000 / frequency / 2; // calculate the delay value between transitions
   //// 1 second's worth of microseconds, divided by the frequency, then split in half since
   //// there are two phases to each cycle
@@ -134,6 +137,8 @@ void buzz(int targetPin, long frequency, long length) {
     delayMicroseconds(delayValue); // wait again or the calculated delay value
   }
   digitalWrite(ledpin3, LOW);
+  digitalWrite(ledpin2, LOW);
+  digitalWrite(ledpin1, LOW);
 }
 
 int song = 0;

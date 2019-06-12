@@ -5,9 +5,9 @@
 #include "pitches1.h"
 
 bool strobe_effect = false;
-int ledpin1 = 25;
-int ledpin2 = 26;
-int ledpin3 = 27;
+int ledpin1 = 27;
+int ledpin2 = 25;
+int ledpin3 = 26;
 int speakerPin = A5;
 float tempo = 115.5;
 
@@ -49,7 +49,7 @@ void setup() {
   initDwenguino();
 
   dwenguinoLCD.setCursor(0,0);
-  dwenguinoLCD.print(String("The Robots 1"));
+  dwenguinoLCD.print(String("The Robots"));
 
   pinMode(speakerPin, OUTPUT);
   pinMode(A0, INPUT);

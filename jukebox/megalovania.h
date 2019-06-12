@@ -2,8 +2,9 @@
 // Program written by Peter Schaedler, 2016
 
 #define buzz A5
-#define led ledpin2
-#define beat 500 // = 60 s / 120 bpm * 1000 ms
+// #define led ledpin2
+// #define beat 500 // = 60 s / 120 bpm * 1000 ms
+float beat = 500;
 
 #define cnat 16.35
 #define csharp 17.32
@@ -26,19 +27,63 @@
 
 
 void play2(double note, int octave, double note_val) {
-  digitalWrite(led, HIGH);
+  // if (digitalRead(SW_E) == PRESSED) {
+  //   while(digitalRead(SW_E) == PRESSED) {
+  //     delay(10);
+  //   }
+  //   strobe_effect = !strobe_effect;
+  // }
+  // beat = analogRead(A0);
+  // long outputValue = map(beat, 0, 1023, 20000, 500);
+  // beat = outputValue/10.0;
+  // dwenguinoLCD.setCursor(0,1);
+  // dwenguinoLCD.print(String("Tempo: "));
+  // dwenguinoLCD.setCursor(8,1);
+  // dwenguinoLCD.print(beat);
+
+  digitalWrite(ledpin1, HIGH);
+  digitalWrite(ledpin2, HIGH);
+  digitalWrite(ledpin3, HIGH);
   tone(buzz, oct(note, octave));
   delay((beat * note_val) - 20);
   noTone(buzz);
-  digitalWrite(led, LOW);
+  digitalWrite(ledpin1, LOW);
+  digitalWrite(ledpin2, LOW);
+  digitalWrite(ledpin3, LOW);
   delay(20);
 }
 
 void rest2(double note_val) {
+  //  if (digitalRead(SW_E) == PRESSED) {
+  //   while(digitalRead(SW_E) == PRESSED) {
+  //     delay(10);
+  //   }
+  //   strobe_effect = !strobe_effect;
+  // }
+  // beat = analogRead(A0);
+  // long outputValue = map(beat, 0, 1023, 5000, 20000);
+  // beat = outputValue/10.0;
+  // dwenguinoLCD.setCursor(0,1);
+  // dwenguinoLCD.print(String("Tempo: "));
+  // dwenguinoLCD.setCursor(8,1);
+  // dwenguinoLCD.print(beat);
   delay(beat * note_val);
 }
 
 void vibrato(double note, int octave, double note_val) {
+  //  if (digitalRead(SW_E) == PRESSED) {
+  //   while(digitalRead(SW_E) == PRESSED) {
+  //     delay(10);
+  //   }
+  //   strobe_effect = !strobe_effect;
+  // }
+  // beat = analogRead(A0);
+  // long outputValue = map(beat, 0, 1023, 20000, 500);
+  // beat = outputValue/10.0;
+  // dwenguinoLCD.setCursor(0,1);
+  // dwenguinoLCD.print(String("Tempo: "));
+  // dwenguinoLCD.setCursor(8,1);
+  // dwenguinoLCD.print(beat);
   for (int i = 0; i < 4; i++) {
     tone(buzz, oct(note, octave));
     delay(beat * note_val / 16);

@@ -14,11 +14,11 @@ int ledpin3 = 26;
 // int ledpin2 = 35;
 // int ledpin3 = 34;
 
-int ledpin4 = 28;
-int ledpin5 = 29;
-int ledpin6 = 30;
-int ledpin7 = 31;
-int ledpin8 = 32;
+// int ledpin4 = 28;
+// int ledpin5 = 29;
+// int ledpin6 = 30;
+// int ledpin7 = 31;
+// int ledpin8 = 32;
 
 #include "gameofthrones.h"
 #include "carrabean.h"
@@ -61,6 +61,7 @@ void setup()
 
 void loop()
 {
+
   m=constrain(m, 0, 12);
 
   buttonState_S = digitalRead(SW_S);
@@ -231,7 +232,7 @@ if (m==4){
    dwenguinoLCD.setCursor(0,0);
    dwenguinoLCD.print(String("The Robots 2"));
     }
-    if (n==11){
+    if (n==12){
        for (int i=0; i<500; i++){
           robots2();
       }
